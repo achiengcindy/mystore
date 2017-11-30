@@ -32,3 +32,6 @@ input[type=submit], a.button {
     font-size:14px;
 
 }
+ .jumbotron {
+    text-align: center
+   }
