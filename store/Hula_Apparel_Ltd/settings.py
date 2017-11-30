@@ -44,7 +44,15 @@ INSTALLED_APPS = [
     'profiles',
     'contacts',
     'crispy_forms',
+
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,6 +81,16 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+    
+    'django.contrib.auth.backends.ModelBackend',
+
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
+
+
 
 WSGI_APPLICATION = 'Hula_Apparel_Ltd.wsgi.application'
 
@@ -133,4 +151,4 @@ if DEBUG:
     STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static", "static"),
 )
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
