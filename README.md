@@ -1,6 +1,7 @@
  mystore
 Resources
 Implemented bootstrap 4 for  navigation get bootstrap at:https://v4-alpha.getbootstrap.com/examples/jumbotron/
+http://django-crispy-forms.readthedocs.io/en/d-0/install.html
 
 Git
 Creating branch
