@@ -7,3 +7,7 @@ Git
 Creating branch
 git branch to see available branches
 git checkout to switch branches
+
+
+Djnag-allauth resources
+https://django-allauth.readthedocs.io/en/latest/installation.html
