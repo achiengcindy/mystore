@@ -48,5 +48,7 @@ Djnag-allauth resources
     ACCOUNT_USERNAME_REQUIRED = True   
     ACCOUNT_PASSWORD_INPUT_RENDER_VALUE =False
     ACCOUNT_USER_MODEL_EMAIL_FIELD ="email"
+####Implementing Stipe paymenyt
 
+[stripe resources](https://django-allauth.readthedocs.io/en/latest/installation.html)
 
