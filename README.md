@@ -1,12 +1,14 @@
- mystore
-#Resources
+ # mystore
+ 
+## Resources
+
 Implemented bootstrap 4 
 navigation get bootstrap at:
 [bootstrap navigation](https://v4-alpha.getbootstrap.com/examples/jumbotron/)
 [link to crispy form doc!](http://django-crispy-forms.readthedocs.io/en/d-0/install.html)
 
 
-Git
+### Git
 Creating branch
 git branch to see available branches
 git checkout to switch branches
@@ -15,7 +17,7 @@ Djnag-allauth resources
 [Djnag-allauth resources](https://django-allauth.readthedocs.io/en/latest/installation.html)
 
 
-
+#### sample code settings.py
     LOGIN_URL = '/accounts/login/'
     LOGIN_REDIRECT_URL = "/"
 
