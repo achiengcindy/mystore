@@ -7,6 +7,7 @@ navigation get bootstrap at:
 [bootstrap navigation](https://v4-alpha.getbootstrap.com/examples/jumbotron/)
 [link to crispy form doc!](http://django-crispy-forms.readthedocs.io/en/d-0/install.html)
 [link stripe js!](https://js.stripe.com/v3)
+https://stripe.com/docs/stripe-js/elements/quickstart#create-token
 
 
 ### Git
