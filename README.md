@@ -12,10 +12,12 @@ navigation get bootstrap at:
 Creating branch
 git branch to see available branches
 git checkout to switch branches
-### CONFIGURING WAIT IN SUBLIME TEXT
+### Configuring wait in sublime text editor
 export EDITOR='subl -w new-window'
 Close the text editor command
 ###Resolving merge conflicts
+1. git checkout master
+1. 
 
 
 Djnag-allauth resources
