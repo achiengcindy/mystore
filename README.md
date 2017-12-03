@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 # mystore
+<<<<<<< HEAD
 =======
  # mystore
  
@@ -63,3 +64,5 @@ Djnag-allauth resources
 [stripe resources](https://django-allauth.readthedocs.io/en/latest/installation.html)
 >>>>>>> master
 
+=======
+>>>>>>> 9dbd3fccd1af3e677a6a543ba6bbed060a645640
