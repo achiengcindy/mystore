@@ -18,14 +18,13 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-
+from contacts import views
 
 urlpatterns = [
     #url(r'^accounts/', include('allauth.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^profiles/', include('profiles.urls')),
-    #url(r'^contacts/$', views.contact, name='contacts'),
-
+    url(r'^contact/$', views.contact, name='contact'),
 ]
 
 if settings.DEBUG:
