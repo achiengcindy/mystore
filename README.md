@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# mystore
-<<<<<<< HEAD
-=======
+
  # mystore
  
 ## Resources
