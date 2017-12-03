@@ -12,6 +12,11 @@ navigation get bootstrap at:
 Creating branch
 git branch to see available branches
 git checkout to switch branches
+### CONFIGURING WAIT IN SUBLIME TEXT
+export EDITOR='subl -w new-window'
+Close the text editor command
+###Resolving merge conflicts
+
 
 Djnag-allauth resources
 [Djnag-allauth resources](https://django-allauth.readthedocs.io/en/latest/installation.html)
