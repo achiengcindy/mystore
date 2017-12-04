@@ -1,28 +1,30 @@
-
  # mystore
  
 ## Resources
 
-Implemented bootstrap 4 
+### Implemented bootstrap 4 
 navigation get bootstrap at:
-[bootstrap navigation](https://v4-alpha.getbootstrap.com/examples/jumbotron/)
+[bootstrap navigation!](https://v4-alpha.getbootstrap.com/examples/jumbotron/)
+
+### crispy forms
 [link to crispy form doc!](http://django-crispy-forms.readthedocs.io/en/d-0/install.html)
 
 
-### Git
-Creating branch
+## Git
+### Creating branch
 git branch to see available branches
 git checkout to switch branches
+### removing files from remote repo
+git rm -r  <filename>
 ### Configuring wait in sublime text editor
 export EDITOR='subl -w new-window'
 Close the text editor command
-###Resolving merge conflicts
+### Resolving merge conflicts
 1. git checkout master
-1. 
 
 
-Djnag-allauth resources
-[Djnag-allauth resources](https://django-allauth.readthedocs.io/en/latest/installation.html)
+### Djnago-allauth resources
+[Djnago-allauth resources!](https://django-allauth.readthedocs.io/en/latest/installation.html)
 
 
 #### sample code settings.py
@@ -56,10 +58,3 @@ Djnag-allauth resources
     ACCOUNT_USERNAME_REQUIRED = True   
     ACCOUNT_PASSWORD_INPUT_RENDER_VALUE =False
     ACCOUNT_USER_MODEL_EMAIL_FIELD ="email"
-####Implementing Stipe paymenyt
-
-[stripe resources](https://django-allauth.readthedocs.io/en/latest/installation.html)
->>>>>>> master
-
-=======
->>>>>>> 9dbd3fccd1af3e677a6a543ba6bbed060a645640
