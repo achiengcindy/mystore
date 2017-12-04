@@ -39,8 +39,20 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script type="text/JavaScript" src="https://js.stripe.com/v2/"></script>-->
     <script src="{% static "js/jquery-3.2.1.js" %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
+    {% block script %}
+    {% endblock %}
+   <script>
+   $( document ).ready(function() {
+     {% block jquery %}
+    {% endblock %}
+     });
+   </script>
+
+
+   
   </body>
 </html>
