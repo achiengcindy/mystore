@@ -11,9 +11,11 @@ navigation get bootstrap at:
 
 
 ## Git
-###Creating branch
+### Creating branch
 git branch to see available branches
 git checkout to switch branches
+### removing files from remote repo
+git rm -r  <filename>
 ### Configuring wait in sublime text editor
 export EDITOR='subl -w new-window'
 Close the text editor command
