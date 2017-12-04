@@ -9,10 +9,6 @@ navigation get bootstrap at:
 ### crispy forms
 [link to crispy form doc!](http://django-crispy-forms.readthedocs.io/en/d-0/install.html)
 
-### stripe
-[link stripe js!](https://js.stripe.com/v3)
-[link stripe configuration!](https://stripe.com/docs/stripe-js/elements/quickstart)
-
 
 ## Git
 ###Creating branch
@@ -60,6 +56,11 @@ Close the text editor command
     ACCOUNT_USERNAME_REQUIRED = True   
     ACCOUNT_PASSWORD_INPUT_RENDER_VALUE =False
     ACCOUNT_USER_MODEL_EMAIL_FIELD ="email"
-#### Implementing Stipe paymenyt
+    
+### stripe
+[link stripe js!](https://js.stripe.com/v3)
 [stripe resources!](https://django-allauth.readthedocs.io/en/latest/installation.html)
+[link stripe configuration!](https://stripe.com/docs/stripe-js/elements/quickstart)
+Get you API keys
+
 
