@@ -61,8 +61,13 @@ Close the text editor command
     
 ### stripe
 [link stripe js!](https://js.stripe.com/v3)
+
 [stripe resources!](https://django-allauth.readthedocs.io/en/latest/installation.html)
+
 [link stripe configuration!](https://stripe.com/docs/stripe-js/elements/quickstart)
-Get you API keys
+
+### tracking Customers orders
+[signals](https://docs.djangoproject.com/en/2.0/topics/signals/)
+
 
 
