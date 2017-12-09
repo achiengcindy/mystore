@@ -3,7 +3,7 @@
 
  {% block script %}
  <script type="text/javascript">
-   Stripe.setPublishableKey('pk_test_O2hH6IuVhpQDkXXgSsqniTpG');
+   Stripe.setPublishableKey('{{publishKey}}');
 
    <!-- sending form to server-->
 function stripeResponseHandler(status, response) {
@@ -49,10 +49,10 @@ function stripeResponseHandler(status, response) {
  {% endblock %}
 
  {% block content %}
-  <div class="row">
+<div class="row">
     <div class="col-md-4 mx-auto">
     
-     <form action="/checkout/" method="POST"> 
+<form action="/checkout/" method="POST"> 
      {% csrf_token %}
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -63,13 +63,8 @@ function stripeResponseHandler(status, response) {
   data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
   data-locale="auto">
 </script>
+
 </form>
-
-</form
-
-
-        </div>
-        </div>
-        
-
+</div>
+</div>
  {% endblock %}

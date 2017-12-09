@@ -19,7 +19,8 @@ def checkout(request):
 				amount = 1000,
 				currency = "usd",
 				description = "Example charge",
-				source = token)
+				source = token
+				)
 		except stripe.error.CardError as e:
 			pass
 	context = {'publishKey': publishKey}
