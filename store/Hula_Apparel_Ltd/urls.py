@@ -18,13 +18,19 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-from contacts import views
+from checkout import views as checkout_views
+from contacts import views as contacts_views
+from profiles import views as profiles_views
 
 urlpatterns = [
-    #url(r'^accounts/', include('allauth.urls')),
+    url(r'^$', profiles_views.home, name='home'),
+    url(r'^about/$', profiles_views.about, name='about'),
+    url(r'^profile/$', profiles_views.userProfile, name='profile'),
+    url(r'^checkout/$', checkout_views.checkout, name='checkout'),
+    url(r'^accounts/', include('allauth.urls')),
+    url(r'^contact/$', contacts_views.contact, name='contact'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^profiles/', include('profiles.urls')),
-    url(r'^contact/$', views.contact, name='contact'),
+    
 ]
 
 if settings.DEBUG:

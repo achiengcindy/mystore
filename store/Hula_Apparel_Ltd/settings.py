@@ -14,7 +14,11 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER=''
+EMAIL_HOST_PASSWORD=''
+EMAIL_PORT='587'
+EMAIL_USE_TLS=True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -40,7 +44,16 @@ INSTALLED_APPS = [
     'profiles',
     'contacts',
     'crispy_forms',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'checkout',
+    'stripe',
+
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,7 +64,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'Hula_Apparel_Ltd.urls'
 
 TEMPLATES = [
@@ -69,6 +81,16 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+    
+    'django.contrib.auth.backends.ModelBackend',
+
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
+
+
 
 WSGI_APPLICATION = 'Hula_Apparel_Ltd.wsgi.application'
 
@@ -129,3 +151,38 @@ if DEBUG:
     STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static", "static"),
 )
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+ACCOUNT_CONFIRM_EMAIL_ON_GET =False
+ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = LOGIN_URL
+ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = None
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS =3
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = "None"
+ACCOUNT_EMAIL_SUBJECT_PREFIX = 'My Subject'
+ACCOUNT_DEFAULT_HTTP_PROTOCOL ="http"
+
+#ACCOUNT_LOGIN_ATTEMPTS_LIMIT =5  
+#ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION =False
+ACCOUNT_LOGOUT_ON_GET =False
+ACCOUNT_LOGOUT_REDIRECT_URL = "/"
+
+ACCOUNT_SIGNUP_FORM_CLASS = None
+ACCOUNT_SIGNUP_PASSWORD_VERIFICATION = True 
+ACCOUNT_UNIQUE_EMAIL = True 
+ACCOUNT_USER_MODEL_USERNAME_FIELD ="username"
+ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE =False
+
+ACCOUNT_USERNAME_MIN_LENGTH =5
+ACCOUNT_USERNAME_BLACKLIST =[]
+ACCOUNT_USERNAME_REQUIRED = True   
+ACCOUNT_PASSWORD_INPUT_RENDER_VALUE =False
+ACCOUNT_USER_MODEL_EMAIL_FIELD ="email"
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_O2hH6IuVhpQDkXXgSsqniTpG'
+STRIPE_SECRET_KEY = 'sk_test_cWJGq0F6OcoSsHclm4scSTKn'
