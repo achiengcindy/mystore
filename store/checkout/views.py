@@ -8,18 +8,19 @@ stripe.api_key=settings.STRIPE_SECRET_KEY
 @login_required
 def checkout(request):
 	publishKey = settings.STRIPE_PUBLISHABLE_KEY
+	customer_id = request.user.userstripe.stripe_id
 	if request.method =='POST':
 		token = request.POST['stripeToken']
-		#token = request.POST('stripeToken')
 		# Get the credit card details submitted by the form
 		# Charge the user's card:
 		try:
-			#charge(
+			customer = stripe.Customer.retrieve(customer_id)
+			customer.sources.create(source=token)
 			charge = stripe.Charge.create(
 				amount = 1000,
 				currency = "usd",
+				customer = customer,
 				description = "Example charge",
-				source = token
 				)
 		except stripe.error.CardError as e:
 			pass

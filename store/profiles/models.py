@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 from allauth.account.signals import user_logged_in, user_signed_up
 import stripe
-
+stripe.api_key=settings.STRIPE_SECRET_KEY
 
 class profile(models.Model):
 	name = models.CharField(max_length=120)
@@ -42,6 +42,7 @@ def profileCallback(sender,request,user, **kwargs):
 		userProfile.save() 
 
 user_logged_in.connect(stripeCallback)
-user_signed_up.connect(profileCallback)   
+user_signed_up.connect(profileCallback) 
+user_signed_up.connect(stripeCallback)  
 			
 		
